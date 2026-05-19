@@ -1,0 +1,60 @@
+What defines a 'full' economic evaluation in health technology assessment?,The comparative analysis of two or more alternatives in terms of both their costs and consequences.
+"In economic evaluation, what term refers to the value of the benefits achievable in another program that are sacrificed to fund the current program?",Opportunity cost.
+What are the four basic tasks of any economic evaluation regarding costs and consequences?,"To identify, measure, value, and compare them."
+Which type of evaluation examines only costs without comparing alternatives or consequences?,Cost description.
+An evaluation that examines only consequences without a comparison of alternatives is called an _____.,Outcome description.
+What distinguishes a 'Partial Evaluation' from a 'Full Economic Evaluation'?,A partial evaluation lacks a comparison of two or more alternatives or fails to examine both costs and consequences.
+"Which specific economic evaluation approach measures consequences in natural units, such as life-years gained or cases detected?",Cost-effectiveness analysis (CEA).
+What is the primary characteristic of a Cost-Utility Analysis (CUA)?,"It measures health outcomes using a generic unit of health gain, typically Quality-Adjusted Life Years (QALYs)."
+In which economic evaluation approach are both costs and consequences valued in monetary units?,Cost-benefit analysis (CBA).
+Under what specific condition is a Cost-Minimization Analysis (CMA) appropriate?,When the consequences of the alternatives under consideration are demonstrated to be equivalent.
+Equation: Incremental Cost-Effectiveness Ratio ($ICER$),$ICER = \frac{C_1 - C_0}{E_1 - E_0}$
+What does the numerator ($C_1 - C_0$) represent in an incremental analysis?,The difference in costs between the new intervention and the comparator.
+"In the context of HTA, what does the term 'incremental analysis' compare?",The difference in costs between alternatives against the difference in their consequences.
+Why is the use of 'average cost' per unit of effect often misleading for policy decisions?,It does not reflect the additional cost required to achieve additional health gains from a specific decision.
+What is the primary limitation of using clinical-specific natural units in a Cost-Effectiveness Analysis?,It is difficult to compare the opportunity cost of benefits forgone in other programs with different clinical objectives.
+Concept: QALY,"Definition: Quality-Adjusted Life Year, a measure that combines the quantity of life (prolongation) and the quality of life into a single index."
+What is the 'societal perspective' in economic evaluation?,"A viewpoint that includes all costs and consequences regardless of who incurs them, including productivity losses and patient time."
+Which perspective is typically adopted by health care payers in HTA?,"The health care system perspective, focusing only on costs falling on the health care budget."
+The two main elements of costing are the measurement of the _____ of resource use and the assignment of unit costs.,Quantities.
+Why are future costs and consequences 'discounted' in economic evaluations?,To reflect time preference and the differential timing of costs and health gains.
+What does a 'threshold' (often denoted as $k$ or $\lambda$) represent in cost-effectiveness decision-making?,"The maximum amount a health system is willing to pay for an additional unit of health gain (e.g., per QALY)."
+"In a cost-effectiveness plane, what does it mean if an intervention is 'dominant'?",The intervention is both more effective and less costly than its comparator.
+When is an intervention considered 'weakly dominant' in a comparison?,"When it has the same effectiveness as the comparator but costs less, or the same cost but higher effectiveness."
+The process of varying key parameters to see how they affect the results of an economic evaluation is called _____.,Sensitivity analysis.
+What is the purpose of a Budget Impact Analysis (BIA) compared to an economic evaluation?,"BIA assesses the financial sustainability and affordability of an intervention within a specific budget, rather than its efficiency."
+What are 'indirect costs' in the context of economic evaluation?,"Costs related to changes in productivity, such as work days lost due to illness or treatment."
+How does 'extra-welfarism' differ from 'welfarism' in health economic evaluation?,Extra-welfarism focuses on health as the primary source of value rather than individual utility or preferences for consumption.
+What is the 'incremental net benefit' (INB) formula using a threshold $\lambda$?,$INB = \lambda \Delta E - \Delta C$
+"In the costing process, how are 'capital costs' distinguished from 'operating costs'?","Capital costs represent investments in long-term assets (e.g., buildings, machines), while operating costs are recurring expenses (e.g., supplies, staff)."
+What type of study design provides the most common basis for measuring resource quantities in economic evaluations alongside clinical trials?,Prospective clinical studies.
+Why might 'future unrelated health care costs' be excluded from an economic evaluation?,Because they result from future therapeutic decisions that should be evaluated on their own merits.
+Term: Cost-Consequences Analysis (CCA),"Definition: An evaluation where costs and various outcomes are presented in a disaggregated format, allowing decision-makers to weigh them individually."
+What is a 'ceiling ratio' in the context of cost-effectiveness?,The maximum cost-effectiveness ratio a decision-maker is prepared to accept for a new technology.
+Which tool is used to represent the probability that an intervention is cost-effective across a range of threshold values?,Cost-Effectiveness Acceptability Curve (CEAC).
+What is 'shadow pricing'?,The adjustment of observed prices or the estimation of values for goods without market prices to reflect their true opportunity cost.
+"In Cost-Benefit Analysis, what is the 'Net Benefit' rule for program selection?",Select the program where the monetary value of the benefits minus the costs is positive and maximized.
+Why is 'incremental analysis' considered the general rule for assessing two programs?,It isolates the specific cost and effect consequences of moving from one program to another.
+Which economic evaluation technique is most useful for allocating a fixed budget within a single clinical field?,Cost-effectiveness analysis (CEA).
+How are 'intangible costs' defined in economic evaluation?,"Non-financial costs that are difficult to measure, such as pain, suffering, or grief."
+What is the primary objective of 'one-way' sensitivity analysis?,To determine the impact on results when only one uncertain parameter is changed at a time.
+What is 'multi-way' sensitivity analysis?,An analysis where two or more uncertain parameters are varied simultaneously to assess their combined impact on the results.
+Concept: Time Horizon,Definition: The duration over which the costs and consequences of the alternatives are tracked and compared in an evaluation.
+What does 'dominance' imply about the necessity of calculating an ICER?,"If an intervention is dominant, the ICER is redundant because the decision to accept the treatment is obvious (cheaper and better)."
+"In economic evaluation, 'measurement' involves quantifying resources in _____ units before valuation.",Physical (or natural).
+What does a negative ICER value typically indicate?,That one of the compared interventions is dominant (either more effective/less costly or less effective/more costly).
+What is the difference between 'efficacy' and 'effectiveness' in HTA consequences?,"Efficacy is the performance under ideal, controlled conditions; effectiveness is the performance in real-world clinical practice."
+Why do analysts usually value costs in 'constant dollars' of a base year?,To remove the effects of inflation from the comparative analysis.
+The technique of _____ is used in CBA to elicit the monetary value individuals place on health improvements.,Willingness to Pay (WTP).
+What is the relationship between 'opportunity cost' and 'health care costs' in a resource-constrained system?,Costs represent the health outcomes lost for other patients whose care is displaced by the new expenditure.
+"In HTA, 'measurement of resource use' is the product of resource _____ and unit prices.",Quantities.
+Which method helps predict the demand for health services by asking individuals to trade off different service characteristics?,Discrete Choice Experiments (DCEs).
+Why is the 'identification' of costs and consequences considered the first step in evaluation?,"It ensures that all relevant items (e.g., staff time, supplies, complications) are included based on the study's perspective."
+What is the 'ICER threshold' used for in the decision-making step?,It serves as a benchmark to judge whether the additional cost of a technology is justified by the additional health gain.
+How does Cost-Utility Analysis address the 'multi-dimensional' nature of health?,"By using utility weights to combine various health states into a single, generic measure of benefit."
+What determines whether a Cost-Benefit Analysis result is stated as a ratio or a net sum?,"The analyst's choice, though 'Net Benefit' is generally preferred for interpreting economic welfare."
+"In HTA, what is the 'gold standard' in the context of selecting comparators?",The intervention that is currently considered the best possible treatment available for the condition.
+Why is 'probabilistic' sensitivity analysis (PSA) used in modern economic evaluations?,To characterize the overall uncertainty in the decision by assigning probability distributions to all input parameters.
+Under what condition would an intervention with a higher ICER still be adopted?,"If there are non-economic factors like ethical considerations, social values, or high unmet clinical needs."
+What does 'value for money' seek to maximize in a health system?,"The desired health outcomes relative to the resources consumed, according to the system's objectives."
+"In the costing of labor, what should be used if the market wage does not reflect the true value of time?",A shadow price.
