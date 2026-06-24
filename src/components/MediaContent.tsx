@@ -2,7 +2,10 @@ import { useEffect, useState } from 'react';
 import type { Chapter, MediaType } from '../data/chapters';
 import { mediaPath, MEDIA_OPTIONS } from '../data/chapters';
 import { parseQuizCsv, type QuizItem } from '../utils/parseCsv';
-import HomeIcon from './HomeIcon';
+import { ProgressLink } from './ProgressLink';
+
+const COURSE_TITLE = 'Health Technology Assessment';
+const OVERVIEW_IMAGE = '/HTA.png';
 
 type Props = {
   chapter: Chapter;
@@ -15,39 +18,55 @@ export default function MediaContent({ chapter, mediaType, onHome }: Props) {
   const src = mediaPath(chapter.prefix, option.suffix, option.ext);
 
   return (
-    <section className="media-panel">
-      <header className="media-panel__header">
+    <div className="app-shell media-shell">
+      <header className="app-header">
         <button
           type="button"
-          className="btn btn--icon"
+          className="home-overview-btn"
           onClick={onHome}
-          aria-label="Home"
-          title="Home"
+          aria-label="Back to course overview"
         >
-          <HomeIcon />
+          <span className="home-overview-btn__media">
+            <img
+              src={OVERVIEW_IMAGE}
+              alt=""
+              onError={(e) => {
+                e.currentTarget.style.display = 'none';
+              }}
+            />
+            <span className="home-overview-btn__fallback" aria-hidden>
+              ⊕
+            </span>
+          </span>
+          <span className="home-overview-btn__label">Course overview</span>
         </button>
+        <h1>{COURSE_TITLE}</h1>
+        <ProgressLink className="progress-link--header" compact />
+      </header>
+
+      <section className="media-panel">
         <div className="media-panel__meta">
           <span className="media-panel__chapter">{chapter.title}</span>
           <span className="media-panel__format">{option.label}</span>
         </div>
-      </header>
 
-      <div className="media-panel__body">
-        {mediaType === 'video' && (
-          <video className="media-video" src={src} controls playsInline />
-        )}
-        {mediaType === 'podcast' && (
-          <div className="media-audio-wrap">
-            <p className="media-audio-label">Podcast</p>
-            <audio className="media-audio" src={src} controls />
-          </div>
-        )}
-        {mediaType === 'infographic' && (
-          <img className="media-infographic" src={src} alt={`${chapter.title} infographic`} />
-        )}
-        {mediaType === 'questionnaire' && <Questionnaire src={src} />}
-      </div>
-    </section>
+        <div className="media-panel__body">
+          {mediaType === 'video' && (
+            <video className="media-video" src={src} controls playsInline />
+          )}
+          {mediaType === 'podcast' && (
+            <div className="media-audio-wrap">
+              <p className="media-audio-label">Podcast</p>
+              <audio className="media-audio" src={src} controls />
+            </div>
+          )}
+          {mediaType === 'infographic' && (
+            <img className="media-infographic" src={src} alt={`${chapter.title} infographic`} />
+          )}
+          {mediaType === 'questionnaire' && <Questionnaire src={src} />}
+        </div>
+      </section>
+    </div>
   );
 }
 
@@ -94,45 +113,64 @@ function Questionnaire({ src }: { src: string }) {
   if (error) return <p className="quiz-status quiz-status--error">{error}</p>;
 
   const item = items[index];
-  const progress = `${index + 1} / ${items.length}`;
+  const atStart = index === 0;
+  const atEnd = index >= items.length - 1;
+
+  const goPrevious = () => {
+    if (atStart) return;
+    setIndex((i) => i - 1);
+    setRevealed(false);
+  };
+
+  const goNext = () => {
+    if (atEnd) return;
+    setIndex((i) => i + 1);
+    setRevealed(false);
+  };
 
   return (
-    <div className="quiz">
-      <div className="quiz__progress">{progress}</div>
-      <p className="quiz__question">{item.question}</p>
-      {revealed ? (
-        <p className="quiz__answer">
-          <strong>Answer:</strong> {item.answer}
-        </p>
-      ) : (
-        <button type="button" className="btn btn--primary" onClick={() => setRevealed(true)}>
-          Show answer
-        </button>
-      )}
-      <div className="quiz__nav">
+    <div className="questionnaire">
+      <p className="questionnaire__progress">
+        Question {index + 1} of {items.length}
+      </p>
+
+      <div className="questionnaire__nav-row">
         <button
           type="button"
-          className="btn btn--secondary"
-          disabled={index === 0}
-          onClick={() => {
-            setIndex((i) => i - 1);
-            setRevealed(false);
-          }}
+          className="questionnaire__arrow"
+          onClick={goPrevious}
+          disabled={atStart}
+          aria-label="Previous question"
         >
-          Previous
+          ←
         </button>
+
+        <div className="questionnaire__card">
+          <p className="questionnaire__question">{item.question}</p>
+          {revealed ? (
+            <div className="questionnaire__answer">
+              <span className="questionnaire__answer-label">Answer</span>
+              <p>{item.answer}</p>
+            </div>
+          ) : null}
+        </div>
+
         <button
           type="button"
-          className="btn btn--secondary"
-          disabled={index >= items.length - 1}
-          onClick={() => {
-            setIndex((i) => i + 1);
-            setRevealed(false);
-          }}
+          className="questionnaire__arrow"
+          onClick={goNext}
+          disabled={atEnd}
+          aria-label="Next question"
         >
-          Next
+          →
         </button>
       </div>
+
+      {!revealed ? (
+        <button type="button" className="questionnaire__reveal" onClick={() => setRevealed(true)}>
+          Show answer
+        </button>
+      ) : null}
     </div>
   );
 }
