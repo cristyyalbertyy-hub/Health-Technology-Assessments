@@ -48,14 +48,14 @@ export default function MediaContent({ chapter, mediaType, onHome }: Props) {
           <span className="media-panel__format">{option.label}</span>
         </div>
 
-        <div className="media-panel__body">
+        <div className="media-panel__body" onContextMenu={(event) => event.preventDefault()}>
           {mediaType === 'video' && (
-            <video className="media-video" src={src} controls playsInline />
+            <video className="media-video" src={src} controls controlsList="nodownload" playsInline />
           )}
           {mediaType === 'podcast' && (
             <div className="media-audio-wrap">
               <p className="media-audio-label">Podcast</p>
-              <audio className="media-audio" src={src} controls />
+              <audio className="media-audio" src={src} controls controlsList="nodownload" />
             </div>
           )}
           {mediaType === 'infographic' && (
