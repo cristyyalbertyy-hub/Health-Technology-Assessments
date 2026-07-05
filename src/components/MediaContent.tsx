@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import type { Chapter, MediaType } from '../data/chapters';
 import { mediaPath, MEDIA_OPTIONS } from '../data/chapters';
 import { parseQuizCsv, type QuizItem } from '../utils/parseCsv';
-import { ProgressLink } from './ProgressLink';
 
 const COURSE_TITLE = 'Health Technology Assessment';
 const OVERVIEW_IMAGE = '/HTA.png';
@@ -41,7 +40,6 @@ export default function MediaContent({ chapter, mediaType, onHome }: Props) {
           <span className="home-overview-btn__label">Course overview</span>
         </button>
         <h1>{COURSE_TITLE}</h1>
-        <ProgressLink className="progress-link--header" compact />
       </header>
 
       <section className="media-panel">

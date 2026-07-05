@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import ChapterCard from './components/ChapterCard';
 import MediaContent from './components/MediaContent';
-import { ProgressLink } from './components/ProgressLink';
 import type { Chapter, MediaType } from './data/chapters';
 import { CHAPTERS } from './data/chapters';
 
@@ -51,7 +50,6 @@ export default function App() {
           <span className="home-overview-btn__label">Course overview</span>
         </button>
         <h1>{COURSE_TITLE}</h1>
-        <ProgressLink className="progress-link--header" compact />
       </header>
 
       <main className="home-main">
@@ -60,9 +58,6 @@ export default function App() {
           <p className="hero__lead">
             Choose a chapter and a content format: video, podcast, infographic, or
             questionnaire.
-          </p>
-          <p className="overview-progress muted">
-            Already enrolled? <ProgressLink className="progress-link--inline" />
           </p>
         </div>
 
@@ -81,7 +76,6 @@ export default function App() {
       </main>
 
       <footer className="footer">
-        <ProgressLink className="progress-link--footer" />
         <p className="footer__tagline">
           HTA · European Regulations · Cost Consequences · HTA Structure
         </p>
