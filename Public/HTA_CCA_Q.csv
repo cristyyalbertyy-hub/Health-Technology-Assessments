@@ -8,8 +8,8 @@ What distinguishes a 'Partial Evaluation' from a 'Full Economic Evaluation'?,A p
 What is the primary characteristic of a Cost-Utility Analysis (CUA)?,"It measures health outcomes using a generic unit of health gain, typically Quality-Adjusted Life Years (QALYs)."
 In which economic evaluation approach are both costs and consequences valued in monetary units?,Cost-benefit analysis (CBA).
 Under what specific condition is a Cost-Minimization Analysis (CMA) appropriate?,When the consequences of the alternatives under consideration are demonstrated to be equivalent.
-Equation: Incremental Cost-Effectiveness Ratio ($ICER$),$ICER = \frac{C_1 - C_0}{E_1 - E_0}$
-What does the numerator ($C_1 - C_0$) represent in an incremental analysis?,The difference in costs between the new intervention and the comparator.
+Equation: Incremental Cost-Effectiveness Ratio (ICER),ICER = \frac{C_1 - C_0}{E_1 - E_0}
+What does the numerator (C_1 - C_0) represent in an incremental analysis?,The difference in costs between the new intervention and the comparator.
 "In the context of HTA, what does the term 'incremental analysis' compare?",The difference in costs between alternatives against the difference in their consequences.
 Why is the use of 'average cost' per unit of effect often misleading for policy decisions?,It does not reflect the additional cost required to achieve additional health gains from a specific decision.
 What is the primary limitation of using clinical-specific natural units in a Cost-Effectiveness Analysis?,It is difficult to compare the opportunity cost of benefits forgone in other programs with different clinical objectives.
@@ -18,14 +18,14 @@ What is the 'societal perspective' in economic evaluation?,"A viewpoint that inc
 Which perspective is typically adopted by health care payers in HTA?,"The health care system perspective, focusing only on costs falling on the health care budget."
 The two main elements of costing are the measurement of the _____ of resource use and the assignment of unit costs.,Quantities.
 Why are future costs and consequences 'discounted' in economic evaluations?,To reflect time preference and the differential timing of costs and health gains.
-What does a 'threshold' (often denoted as $k$ or $\lambda$) represent in cost-effectiveness decision-making?,"The maximum amount a health system is willing to pay for an additional unit of health gain (e.g., per QALY)."
+What does a 'threshold' (often denoted as k or \lambda) represent in cost-effectiveness decision-making?,"The maximum amount a health system is willing to pay for an additional unit of health gain (e.g., per QALY)."
 "In a cost-effectiveness plane, what does it mean if an intervention is 'dominant'?",The intervention is both more effective and less costly than its comparator.
 When is an intervention considered 'weakly dominant' in a comparison?,"When it has the same effectiveness as the comparator but costs less, or the same cost but higher effectiveness."
 The process of varying key parameters to see how they affect the results of an economic evaluation is called _____.,Sensitivity analysis.
 What is the purpose of a Budget Impact Analysis (BIA) compared to an economic evaluation?,"BIA assesses the financial sustainability and affordability of an intervention within a specific budget, rather than its efficiency."
 What are 'indirect costs' in the context of economic evaluation?,"Costs related to changes in productivity, such as work days lost due to illness or treatment."
 How does 'extra-welfarism' differ from 'welfarism' in health economic evaluation?,Extra-welfarism focuses on health as the primary source of value rather than individual utility or preferences for consumption.
-What is the 'incremental net benefit' (INB) formula using a threshold $\lambda$?,$INB = \lambda \Delta E - \Delta C$
+What is the 'incremental net benefit' (INB) formula using a threshold \lambda?,INB = \lambda \Delta E - \Delta C
 "In the costing process, how are 'capital costs' distinguished from 'operating costs'?","Capital costs represent investments in long-term assets (e.g., buildings, machines), while operating costs are recurring expenses (e.g., supplies, staff)."
 What type of study design provides the most common basis for measuring resource quantities in economic evaluations alongside clinical trials?,Prospective clinical studies.
 Why might 'future unrelated health care costs' be excluded from an economic evaluation?,Because they result from future therapeutic decisions that should be evaluated on their own merits.
