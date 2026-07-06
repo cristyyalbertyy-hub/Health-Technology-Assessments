@@ -5,7 +5,10 @@ export type Chapter = {
   prefix: string;
   title: string;
   subtitle: string;
+  color: string;
 };
+
+export const courseTitle = 'Health Technology Assessment';
 
 export const MEDIA_OPTIONS: { type: MediaType; label: string; suffix: string; ext: string }[] = [
   { type: 'video', label: 'Video', suffix: 'V', ext: 'mp4' },
@@ -20,18 +23,21 @@ export const CHAPTERS: Chapter[] = [
     prefix: 'HTA_ER',
     title: 'European Regulations in Health Technology Assessment',
     subtitle: 'Applied Economics in Medicine',
+    color: '#14213d',
   },
   {
     id: 'CCA',
     prefix: 'HTA_CCA',
     title: 'Cost Consequences Approach',
     subtitle: 'Health Technology Assessment',
+    color: '#2d4636',
   },
   {
     id: 'HTAS',
     prefix: 'HTA_HTAS',
     title: 'HTA Structure',
     subtitle: 'Applied Economics in Medicine',
+    color: '#d36b31',
   },
 ];
 
