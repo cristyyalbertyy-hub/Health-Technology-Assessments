@@ -2,7 +2,7 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import ChapterContent from './components/ChapterContent';
 import { CHAPTERS, courseTitle } from './data/chapters';
 
-const overviewImage = '/HTA.png';
+const overviewImage = '/HTAA.png';
 
 type Selection = { chapterId: string };
 

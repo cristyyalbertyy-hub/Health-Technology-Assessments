@@ -4,7 +4,7 @@ import { mediaPath, MEDIA_OPTIONS } from '../data/chapters';
 import { parseQuizCsv, type QuizItem } from '../utils/parseCsv';
 
 const COURSE_TITLE = 'Health Technology Assessment';
-const OVERVIEW_IMAGE = '/HTA.png';
+const OVERVIEW_IMAGE = '/HTAA.png';
 
 type Props = {
   chapter: Chapter;
