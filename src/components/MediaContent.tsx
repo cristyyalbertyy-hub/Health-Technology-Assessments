@@ -1,6 +1,8 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import type { Chapter, MediaType } from '../data/chapters';
 import { mediaPath, MEDIA_OPTIONS } from '../data/chapters';
+import { useMediaProgress } from '../hooks/useMediaProgress';
+import { bindPlaybackProgress } from '../lib/playbackProgress';
 import { parseQuizCsv, type QuizItem } from '../utils/parseCsv';
 
 const COURSE_TITLE = 'Health Technology Assessment';
@@ -15,6 +17,21 @@ type Props = {
 export default function MediaContent({ chapter, mediaType, onHome }: Props) {
   const option = MEDIA_OPTIONS.find((m) => m.type === mediaType)!;
   const src = mediaPath(chapter.prefix, option.suffix, option.ext);
+  const { trackWatchComplete } = useMediaProgress(chapter.id);
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const audioRef = useRef<HTMLAudioElement>(null);
+
+  useEffect(() => {
+    const el = videoRef.current;
+    if (!el || mediaType !== 'video') return;
+    return bindPlaybackProgress(el, () => void trackWatchComplete('V'));
+  }, [mediaType, src, trackWatchComplete]);
+
+  useEffect(() => {
+    const el = audioRef.current;
+    if (!el || mediaType !== 'podcast') return;
+    return bindPlaybackProgress(el, () => void trackWatchComplete('P'));
+  }, [mediaType, src, trackWatchComplete]);
 
   return (
     <div className="app-shell media-shell">
@@ -50,12 +67,12 @@ export default function MediaContent({ chapter, mediaType, onHome }: Props) {
 
         <div className="media-panel__body" onContextMenu={(event) => event.preventDefault()}>
           {mediaType === 'video' && (
-            <video className="media-video" src={src} controls controlsList="nodownload" playsInline />
+            <video ref={videoRef} className="media-video" src={src} controls controlsList="nodownload" playsInline />
           )}
           {mediaType === 'podcast' && (
             <div className="media-audio-wrap">
               <p className="media-audio-label">Podcast</p>
-              <audio className="media-audio" src={src} controls controlsList="nodownload" />
+              <audio ref={audioRef} className="media-audio" src={src} controls controlsList="nodownload" />
             </div>
           )}
           {mediaType === 'infographic' && (
