@@ -1016,6 +1016,14 @@ code {
   right: 0;
   top: 50%;
   transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.app-header__actions .progress-link--header {
+  position: static;
+  transform: none;
 }
 
 .auth-account {

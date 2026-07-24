@@ -1,9 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import ChapterContent from './components/ChapterContent';
-import { CHAPTERS, courseTitle } from './data/chapters';
+import { CHAPTERS, courseTitle, exitDisciplinesUrl, overviewImage } from './data/chapters';
 import { useAuth } from './context/AuthContext';
-
-const overviewImage = '/HTAA.png';
 
 type Selection = { chapterId: string };
 
@@ -149,8 +147,11 @@ export default function App() {
           <span className="home-overview-btn__label">Course overview</span>
         </button>
         <h1>{courseTitle}</h1>
-        {userEmail ? (
-          <div className="app-header__actions">
+        <div className="app-header__actions">
+          <a href={exitDisciplinesUrl} className="progress-link progress-link--header">
+            ← All disciplines
+          </a>
+          {userEmail ? (
             <div className="auth-account">
               <span className="auth-account__email" title={userEmail}>
                 {userEmail}
@@ -159,8 +160,8 @@ export default function App() {
                 Sair
               </button>
             </div>
-          </div>
-        ) : null}
+          ) : null}
+        </div>
       </header>
 
       {showMobileLessonBar && mobileLessonContext ? (

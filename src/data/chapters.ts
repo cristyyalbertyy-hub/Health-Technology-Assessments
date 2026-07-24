@@ -10,6 +10,17 @@ export type Chapter = {
 
 export const courseTitle = 'Health Technology Assessment';
 
+/** Back to Studio9 Medical Science catalogue (embedded vs standalone). */
+export const exitDisciplinesUrl =
+  import.meta.env.VITE_STUDIO9_EXIT_URL ??
+  (import.meta.env.BASE_URL === '/'
+    ? 'https://studio9medical.com/packages/'
+    : '/packages/');
+
+const assetBase = import.meta.env.VITE_MEDIA_ORIGIN || import.meta.env.BASE_URL;
+
+export const overviewImage = `${assetBase}HTAA.png`;
+
 export const MEDIA_OPTIONS: { type: MediaType; label: string; suffix: string; ext: string }[] = [
   { type: 'video', label: 'Video', suffix: 'V', ext: 'mp4' },
   { type: 'podcast', label: 'Podcast', suffix: 'P', ext: 'm4a' },
@@ -42,5 +53,6 @@ export const CHAPTERS: Chapter[] = [
 ];
 
 export function mediaPath(prefix: string, suffix: string, ext: string): string {
-  return `/${prefix}_${suffix}.${ext}`;
+  const base = import.meta.env.VITE_MEDIA_ORIGIN || import.meta.env.BASE_URL;
+  return `${base}${prefix}_${suffix}.${ext}`;
 }
