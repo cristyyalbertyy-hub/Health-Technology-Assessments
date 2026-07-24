@@ -10,13 +10,6 @@ export type Chapter = {
 
 export const courseTitle = 'Health Technology Assessment';
 
-/** Back to Studio9 Medical Science catalogue (embedded vs standalone). */
-export const exitDisciplinesUrl =
-  import.meta.env.VITE_STUDIO9_EXIT_URL ??
-  (import.meta.env.BASE_URL === '/'
-    ? 'https://studio9medical.com/packages/'
-    : '/packages/');
-
 const assetBase = import.meta.env.VITE_MEDIA_ORIGIN || import.meta.env.BASE_URL;
 
 export const overviewImage = `${assetBase}HTAA.png`;
